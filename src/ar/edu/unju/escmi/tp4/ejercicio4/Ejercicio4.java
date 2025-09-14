@@ -18,7 +18,7 @@ public class Ejercicio4 {
         int op;
 
         do{
-            System.out.println("-----------Menu de Opciones-----------");
+            System.out.println("---------------------Menu de Opciones---------------------");
             System.out.println("1- Crear cliente");
             System.out.println("2- Mostrar los datos de un cliente."); 
             System.out.println("3- Mostrar todos los clientes.");
@@ -32,8 +32,8 @@ public class Ejercicio4 {
                 case 1: {
                     System.out.println("Ingrese DNI:"); int dni=sc.nextInt(); sc.nextLine();
                     System.out.println("Ingrese nombre:"); String nombre=sc.nextLine();
-                    System.out.println("Ingrese tipo de cliente (ocasional/frecuente):"); String tipo=sc.nextLine();
-                    while(!tipo.equalsIgnoreCase("ocasional") && !tipo.equalsIgnoreCase("frecuente")) {
+                    System.out.println("Ingrese tipo de cliente (ocasional/frecuente):"); String tipo=sc.nextLine().toLowerCase();
+                    while(!tipo.equals("ocasional") && !tipo.equals("frecuente")) {
                         System.out.println("Tipo invalido. Intente nuevamente:");
                         tipo = sc.nextLine();
                     }
@@ -54,15 +54,15 @@ public class Ejercicio4 {
                     break;
                 }
                 case 4: {
-                    clientes.stream().filter(c -> c.getTipoCliente().equalsIgnoreCase("ocasional")).forEach(System.out::println);
+                    clientes.stream().filter(c -> c.getTipoCliente().equals("ocasional")).forEach(System.out::println);
 
-                    long cant = clientes.stream().filter(c -> c.getTipoCliente().equalsIgnoreCase("ocasional")).count();
+                    long cant = clientes.stream().filter(c -> c.getTipoCliente().equals("ocasional")).count();
                     System.out.println("La cantidad de clientes ocasionales es: "+cant);
                     break;
                 }
                 case 5: {
-                    clientes.stream().filter(c -> c.getTipoCliente().equalsIgnoreCase("frecuente")).forEach(System.out::println);
-                    long cant = clientes.stream().filter(c -> c.getTipoCliente().equalsIgnoreCase("frecuente")).count();
+                    clientes.stream().filter(c -> c.getTipoCliente().equals("frecuente")).forEach(System.out::println);
+                    long cant = clientes.stream().filter(c -> c.getTipoCliente().equals("frecuente")).count();
                     System.out.println("La cantidad de clientes frecuentes es: "+cant);
                     break;
                 }
