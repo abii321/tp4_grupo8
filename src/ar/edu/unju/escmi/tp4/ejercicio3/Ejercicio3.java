@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 
 public class Ejercicio3 {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Set<Paciente> pacientes = new TreeSet<>();
         byte op;
@@ -41,12 +41,10 @@ public class Ejercicio3 {
 
                     pacientes.add(nuevoPaciente);
                     System.out.println("Paciente Agregado Correctamente");
-                    Thread.sleep(2000);
                     break;
 
                 case 2: // Mostrar los pacientes
                     pacientes.stream().forEach(System.out::println);
-                    Thread.sleep(4000);
                     break;
 
                 case 3: // Mostrar el paciente que está en la mitad de la lista
@@ -64,31 +62,26 @@ public class Ejercicio3 {
                         System.out.println(pacienteDeLaMitad);
                     else
                         System.out.println("No hay pacientes suficientes para encontrar la mitad");
-                    Thread.sleep(2000);
                     break;
 
                 case 4: // Mostrar el primer paciente de la lista
                     Paciente primerPaciente = ((TreeSet<Paciente>) pacientes).first(); // Cast de Set a TreeSet para acceder a métodos específicos como first()
                     System.out.println(primerPaciente);
-                    Thread.sleep(2000);
                     break;
 
                 case 5: // Mostrar el ultimo paciente de la lista
                     Paciente ultimoPaciente = ((TreeSet<Paciente>) pacientes).last(); // Cast de Set a TreeSet para acceder a métodos específicos como last()
                     System.out.println(ultimoPaciente);
-                    Thread.sleep(2000);
                     break;
 
                 case 6: // Filtrar pacientes por el Numero de Historia Clinica
                     System.out.print("Ingrese Numero de Historia Clinica a filtrar (Se mostraran mayores a ese numero): ");
                     int numeroFiltroHistoriaClinica = sc.nextInt();
                     pacientes.stream().filter(n -> n.getNumeroHistoriaClinica() > numeroFiltroHistoriaClinica).forEach(System.out::println);
-                    Thread.sleep(4000);
                     break;
 
                 case 7:
                     System.out.println("Saliendo del programa...");
-                    Thread.sleep(2000);
                     break;
 
                 default:
