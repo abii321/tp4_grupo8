@@ -16,22 +16,6 @@ public class Empleado {
         this.categoria = categoria;
     }
 
-    // Getters y Setters
-    public String getDni() { return dni; }
-    public void setDni(String dni) { this.dni = dni; }
-
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
-
-    public String getApellido() { return apellido; }
-    public void setApellido(String apellido) { this.apellido = apellido; }
-
-    public double getSueldo() { return sueldo; }
-    public void setSueldo(double sueldo) { this.sueldo = sueldo; }
-
-    public char getCategoria() { return categoria; }
-    public void setCategoria(char categoria) { this.categoria = categoria; }
-
     // Mostrar datos
     public void mostrarDatos() {
         System.out.println("Empleado { clave(dni+categoria)=" + dni + categoria + " }");

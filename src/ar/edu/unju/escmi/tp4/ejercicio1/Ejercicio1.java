@@ -4,45 +4,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ejercicio1 {
-
     private static ArrayList<Jugador> lista = new ArrayList<>();
     private static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        int opcion;
-        do {
-            mostrarMenu();
-            opcion = leerInt("Ingrese una opción: ");
-            switch (opcion) {
-                case 1:
-                    altaJugador();
-                    break;
-                case 2:
-                    modificarJugador();
-                    break;
-                case 3:
-                    eliminarJugador();
-                    break;
-                case 4:
-                    mostrarTodos();
-                    break;
-                case 5:
-                    System.out.println("Cantidad de jugadores: " + lista.size());
-                    break;
-                case 6:
-                    lista.clear();
-                    System.out.println("Lista de jugadores vaciada.");
-                    break;
-                case 7:
-                    System.out.println("Saliendo...");
-                    break;
-                default:
-                    System.out.println("Opción inválida. Intente de nuevo.");
-            }
-        } while (opcion != 7);
-    }
-
-    private static void mostrarMenu() {
+        private static void mostrarMenu() {
         System.out.println("\n===== MENU EJERCICIO 1 =====");
         System.out.println("1 – Alta de jugador.");
         System.out.println("2 – Modificar los datos de un jugador.");
@@ -164,5 +129,39 @@ public class Ejercicio1 {
     private static String leerStringAllowEmpty(String msg) {
         System.out.print(msg);
         return sc.nextLine().trim();
+    }
+
+    public static void main(String[] args) {
+        int opcion;
+        do {
+            mostrarMenu();
+            opcion = leerInt("Ingrese una opción: ");
+            switch (opcion) {
+                case 1:
+                    altaJugador();
+                    break;
+                case 2:
+                    modificarJugador();
+                    break;
+                case 3:
+                    eliminarJugador();
+                    break;
+                case 4:
+                    mostrarTodos();
+                    break;
+                case 5:
+                    System.out.println("Cantidad de jugadores: " + lista.size());
+                    break;
+                case 6:
+                    lista.clear();
+                    System.out.println("Lista de jugadores vaciada.");
+                    break;
+                case 7:
+                    System.out.println("Saliendo...");
+                    break;
+                default:
+                    System.out.println("Opción inválida. Intente de nuevo.");
+            }
+        } while (opcion != 7);
     }
 }

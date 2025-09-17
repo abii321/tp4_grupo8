@@ -9,20 +9,6 @@ public class Jugador {
 
     // Constructor por defecto
     public Jugador() {
-        this.dni = "";
-        this.nombre = "";
-        this.equipo = "";
-        this.nacionalidad = "";
-        this.estatura = 0.0;
-    }
-
-    // Constructor parametrizado (opcionalmente útil)
-    public Jugador(String dni, String nombre, String equipo, String nacionalidad, double estatura) {
-        this.dni = dni;
-        this.nombre = nombre;
-        this.equipo = equipo;
-        this.nacionalidad = nacionalidad;
-        this.estatura = estatura;
     }
 
     // Getters y Setters

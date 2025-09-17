@@ -9,34 +9,7 @@ public class Ejercicio2 {
 
     private static HashMap<String, Empleado> mapa = new HashMap<>();
     private static Scanner sc = new Scanner(System.in);
-
-    public static void main(String[] args) {
-        int opcion;
-        do {
-            mostrarMenu();
-            opcion = leerInt("Ingrese una opción: ");
-            switch (opcion) {
-                case 1:
-                    altaEmpleado();
-                    break;
-                case 2:
-                    mostrarEmpleados();
-                    break;
-                case 3:
-                    eliminarEmpleado();
-                    break;
-                case 4:
-                    consultarEmpleado();
-                    break;
-                case 5:
-                    System.out.println("Saliendo...");
-                    break;
-                default:
-                    System.out.println("Opción inválida. Intente nuevamente.");
-            }
-        } while (opcion != 5);
-    }
-
+    
     private static void mostrarMenu() {
         System.out.println("\n===== MENU EJERCICIO 2 =====");
         System.out.println("1 – Alta de empleado.");
@@ -138,5 +111,31 @@ public class Ejercicio2 {
             if (s.length() == 1) return s.charAt(0);
             System.out.println("Ingrese una sola letra para la categoría.");
         }
+    }
+    public static void main(String[] args) {
+        int opcion;
+        do {
+            mostrarMenu();
+            opcion = leerInt("Ingrese una opción: ");
+            switch (opcion) {
+                case 1:
+                    altaEmpleado();
+                    break;
+                case 2:
+                    mostrarEmpleados();
+                    break;
+                case 3:
+                    eliminarEmpleado();
+                    break;
+                case 4:
+                    consultarEmpleado();
+                    break;
+                case 5:
+                    System.out.println("Saliendo...");
+                    break;
+                default:
+                    System.out.println("Opción inválida. Intente nuevamente.");
+            }
+        } while (opcion != 5);
     }
 }
