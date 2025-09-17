@@ -33,20 +33,11 @@ public class Ejercicio5 {
                         break;
                     }
 
-                    Producto p = new Producto();
+                    System.out.println("Descripcion:"); String desc=sc.nextLine();
+                    System.out.println("Precio"); double precio = sc.nextDouble(); sc.nextLine();
+                    System.out.println("Fecha de vencimiento yyyy-mm-dd"); String fecha = sc.nextLine(); 
 
-                    System.out.print("Descripción: ");
-                    p.setDescripcion(sc.nextLine());
-
-                    System.out.print("Precio: ");
-                    p.setPrecio(Double.parseDouble(sc.nextLine()));
-
-                    System.out.print("Fecha de vencimiento (AAAA-MM-DD): ");
-                    String fecha = sc.nextLine();
-                    if (!fecha.isEmpty()) {
-                        p.setFechaVencimiento(LocalDate.parse(fecha));
-                    }
-
+                    Producto p = new Producto(desc, precio, LocalDate.parse(fecha));
                     productos.put(clave, p);
                     System.out.println("Producto agregado.");
                     break;
