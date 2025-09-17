@@ -10,7 +10,11 @@ public class Producto {
     private LocalDate fechaVencimiento;
 
     // Constructor por defecto
-    public Producto() { }
+        public Producto(String descripcion, double precio, LocalDate fechaVencimiento) {
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.fechaVencimiento = fechaVencimiento;
+    }
 
     // Getters y setters que se usan en el main
     public void setDescripcion(String descripcion) {
