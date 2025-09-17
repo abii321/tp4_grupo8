@@ -11,13 +11,10 @@ public class Libro implements Comparable<Libro> {
     public String getIsbn() { return isbn; }
     public void setIsbn(String isbn) { this.isbn = isbn; }
 
-    public String getTitulo() { return titulo; }
     public void setTitulo(String titulo) { this.titulo = titulo; }
 
-    public int getCantidadPaginas() { return cantidadPaginas; }
     public void setCantidadPaginas(int cantidadPaginas) { this.cantidadPaginas = cantidadPaginas; }
 
-    public String getAutor() { return autor; }
     public void setAutor(String autor) { this.autor = autor; }
 
     public void mostrarDatos() {
